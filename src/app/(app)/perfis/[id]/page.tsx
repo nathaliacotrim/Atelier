@@ -16,7 +16,7 @@ export default async function EditarPerfil({ params }: PageProps<"/perfis/[id]">
 
   return (
     <div>
-      <h1 className="font-serif text-4xl font-semibold">{perfil.arroba}</h1>
+      <h1 className="font-serif text-4xl">{perfil.arroba}</h1>
       <p className="mt-2 mb-10 text-cinza">Atualize o briefing desta conta.</p>
       <FormularioPerfil perfil={perfil} />
       <form action={excluirPerfil} className="mt-16 border-t border-linha pt-6">

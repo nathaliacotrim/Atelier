@@ -13,7 +13,7 @@ export default async function Criar() {
 
   return (
     <form action={criarConteudo} className="mx-auto max-w-3xl">
-      <h1 className="text-center font-serif text-4xl font-semibold">O que vamos criar?</h1>
+      <h1 className="text-center font-serif text-4xl">O que vamos criar?</h1>
       <p className="mt-2 text-center text-cinza">
         Para <span className="text-vinho">{perfil.arroba}</span>. Escolha o formato e o objetivo.
       </p>

@@ -40,7 +40,7 @@ export default async function Historico({ searchParams }: PageProps<"/historico"
 
   return (
     <div className="max-w-3xl">
-      <h1 className="font-serif text-4xl font-semibold">Histórico de conteúdos</h1>
+      <h1 className="font-serif text-4xl">Histórico de conteúdos</h1>
       <p className="mt-2 text-cinza">Tudo o que você criou para {perfil.arroba}.</p>
 
       <form action="/historico" className="mt-8">

@@ -12,8 +12,8 @@ create table public.perfis (
   tom_de_voz text not null default '',
   objetivos text not null default '',
   referencias text not null default '',
-  cor_primaria text not null default '#6B1E2E',
-  cor_secundaria text not null default '#EADBC8',
+  cor_primaria text not null default '#5C0F14',
+  cor_secundaria text not null default '#F3E6D6',
   criado_em timestamptz not null default now()
 );
 

@@ -25,7 +25,7 @@ export default async function Inicio() {
   return (
     <main className="mx-auto flex max-w-5xl flex-col px-6 py-16">
       <p className="font-serif text-2xl italic text-vinho">{NOME_APP}</p>
-      <h1 className="mt-10 max-w-2xl font-serif text-5xl leading-tight font-semibold sm:text-6xl">
+      <h1 className="mt-10 max-w-2xl font-serif text-5xl leading-tight sm:text-6xl">
         Conteúdo para Instagram com <em className="text-vinho">a voz da sua marca</em>.
       </h1>
       <p className="mt-6 max-w-xl text-lg text-cinza">
@@ -43,7 +43,7 @@ export default async function Inicio() {
       <ul className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {RECURSOS.map(([nome, descricao]) => (
           <li key={nome} className="rounded-2xl border border-linha bg-white/60 p-6">
-            <p className="font-serif text-xl font-semibold text-vinho">{nome}</p>
+            <p className="font-serif text-xl text-vinho">{nome}</p>
             <p className="mt-2 text-sm leading-relaxed text-cinza">{descricao}</p>
           </li>
         ))}

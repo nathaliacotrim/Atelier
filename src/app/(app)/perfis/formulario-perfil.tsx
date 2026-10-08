@@ -135,7 +135,7 @@ export function FormularioPerfil({ perfil }: { perfil?: Perfil }) {
                 <input
                   type="color"
                   name="cor_primaria"
-                  defaultValue={perfil?.cor_primaria ?? "#6B1E2E"}
+                  defaultValue={perfil?.cor_primaria ?? "#5C0F14"}
                   className="mt-1 block h-12 w-20 cursor-pointer rounded-lg border border-linha"
                 />
               </label>
@@ -144,7 +144,7 @@ export function FormularioPerfil({ perfil }: { perfil?: Perfil }) {
                 <input
                   type="color"
                   name="cor_secundaria"
-                  defaultValue={perfil?.cor_secundaria ?? "#EADBC8"}
+                  defaultValue={perfil?.cor_secundaria ?? "#F3E6D6"}
                   className="mt-1 block h-12 w-20 cursor-pointer rounded-lg border border-linha"
                 />
               </label>

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import { NOME_APP } from "@/lib/marca";
 import "./globals.css";
 
-const titulo = Cormorant_Garamond({
+const titulo = Playfair_Display({
   variable: "--fonte-titulo",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
 });
 

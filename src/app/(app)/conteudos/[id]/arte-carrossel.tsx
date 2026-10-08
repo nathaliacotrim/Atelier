@@ -84,7 +84,7 @@ export function ArteCarrossel({ arte, perfil }: { arte: Arte; perfil: Perfil }) 
                         fontFamily: "var(--fonte-titulo), serif",
                         fontSize: capa ? 120 : 100,
                         lineHeight: 1.08,
-                        fontWeight: 600,
+                        fontWeight: 400,
                         color: destaque,
                         marginTop: "auto",
                       }}

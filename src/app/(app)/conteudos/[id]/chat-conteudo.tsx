@@ -123,7 +123,7 @@ export function ChatConteudo({
           <span className="rounded-full bg-bege px-3 py-1 text-vinho">{nomeObjetivo(conversa.objetivo)}</span>
           <span className="rounded-full border border-linha px-3 py-1 text-cinza">{perfil.arroba}</span>
         </div>
-        <h1 className="mt-4 font-serif text-3xl font-semibold">{conversa.tema || "Tema sugerido pela IA"}</h1>
+        <h1 className="mt-4 font-serif text-3xl">{conversa.tema || "Tema sugerido pela IA"}</h1>
       </header>
 
       <div className="space-y-6">
@@ -149,7 +149,7 @@ export function ChatConteudo({
         <section className="mt-10 rounded-2xl border border-linha bg-white/70 p-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <h2 className="font-serif text-2xl font-semibold">Arte do carrossel</h2>
+              <h2 className="font-serif text-2xl">Arte do carrossel</h2>
               <p className="text-sm text-cinza">Slides prontos para postar, com as cores do perfil.</p>
             </div>
             <button

@@ -1,23 +1,25 @@
 @import "tailwindcss";
 
 /*
- * Paleta da marca. Vinho e bege são provisórios até a naty mandar os códigos
- * oficiais: trocar só estas variáveis muda o app inteiro.
+ * Paleta da marca: vinho profundo com bege, tirada da referência da naty.
+ * Trocar só estas variáveis muda o app inteiro.
  */
 :root {
-  --vinho: #6b1e2e;
-  --vinho-escuro: #4a1420;
-  --bege: #eadbc8;
-  --creme: #faf6f1;
-  --tinta: #2a1a1d;
-  --cinza: #7a6a6d;
-  --linha: #e6dcd3;
+  --vinho: #5c0f14;
+  --vinho-escuro: #3f0507;
+  --bege: #f3e6d6;
+  --dourado: #c8a27c;
+  --creme: #fbf7f2;
+  --tinta: #2a1214;
+  --cinza: #7a6466;
+  --linha: #eadfd3;
 }
 
 @theme inline {
   --color-vinho: var(--vinho);
   --color-vinho-escuro: var(--vinho-escuro);
   --color-bege: var(--bege);
+  --color-dourado: var(--dourado);
   --color-creme: var(--creme);
   --color-tinta: var(--tinta);
   --color-cinza: var(--cinza);

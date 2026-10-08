@@ -8,7 +8,7 @@ export default async function NovoPerfil() {
   const perfis = await listarPerfis();
   return (
     <div>
-      <h1 className="font-serif text-4xl font-semibold">
+      <h1 className="font-serif text-4xl">
         {perfis.length === 0 ? "Vamos conhecer a sua marca" : "Nova conta"}
       </h1>
       <p className="mt-2 mb-10 text-cinza">

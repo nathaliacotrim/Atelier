@@ -10,7 +10,7 @@ export default async function Perfis() {
     <div className="max-w-3xl">
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h1 className="font-serif text-4xl font-semibold">Perfis</h1>
+          <h1 className="font-serif text-4xl">Perfis</h1>
           <p className="mt-2 text-cinza">Cada conta tem seu nicho, público, produtos e tom de voz.</p>
         </div>
         <Link

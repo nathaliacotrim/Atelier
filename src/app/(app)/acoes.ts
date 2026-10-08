@@ -25,8 +25,8 @@ function lerPerfil(form: FormData) {
     CAMPOS_PERFIL.map((campo) => [campo, String(form.get(campo) ?? "").trim()]),
   ) as Record<(typeof CAMPOS_PERFIL)[number], string>;
   if (dados.arroba && !dados.arroba.startsWith("@")) dados.arroba = `@${dados.arroba}`;
-  if (!/^#[0-9a-fA-F]{6}$/.test(dados.cor_primaria)) dados.cor_primaria = "#6B1E2E";
-  if (!/^#[0-9a-fA-F]{6}$/.test(dados.cor_secundaria)) dados.cor_secundaria = "#EADBC8";
+  if (!/^#[0-9a-fA-F]{6}$/.test(dados.cor_primaria)) dados.cor_primaria = "#5C0F14";
+  if (!/^#[0-9a-fA-F]{6}$/.test(dados.cor_secundaria)) dados.cor_secundaria = "#F3E6D6";
   return dados;
 }
 

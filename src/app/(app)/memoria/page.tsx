@@ -17,7 +17,7 @@ export default async function PaginaMemoria() {
 
   return (
     <div className="max-w-3xl">
-      <h1 className="font-serif text-4xl font-semibold">Memória da IA</h1>
+      <h1 className="font-serif text-4xl">Memória da IA</h1>
       <p className="mt-2 text-cinza">O que a IA aprendeu sobre {perfil.arroba} e as suas preferências.</p>
 
       <div className="mt-6 rounded-2xl bg-bege/50 p-4 text-sm leading-relaxed">
