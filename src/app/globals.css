@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
+/*
+ * Paleta da marca. Vinho e bege são provisórios até a naty mandar os códigos
+ * oficiais: trocar só estas variáveis muda o app inteiro.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --vinho: #6b1e2e;
+  --vinho-escuro: #4a1420;
+  --bege: #eadbc8;
+  --creme: #faf6f1;
+  --tinta: #2a1a1d;
+  --cinza: #7a6a6d;
+  --linha: #e6dcd3;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-vinho: var(--vinho);
+  --color-vinho-escuro: var(--vinho-escuro);
+  --color-bege: var(--bege);
+  --color-creme: var(--creme);
+  --color-tinta: var(--tinta);
+  --color-cinza: var(--cinza);
+  --color-linha: var(--linha);
+  --font-sans: var(--fonte-texto);
+  --font-serif: var(--fonte-titulo);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--creme);
+  color: var(--tinta);
 }
+
+/* Texto gerado pela IA (markdown) */
+.conteudo-ia h1,
+.conteudo-ia h2,
+.conteudo-ia h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--vinho);
+}
+.conteudo-ia h1 { font-size: 1.5rem; }
+.conteudo-ia h2 { font-size: 1.25rem; }
+.conteudo-ia h3 { font-size: 1.1rem; }
+.conteudo-ia p { margin: 0.5rem 0; line-height: 1.65; }
+.conteudo-ia ul,
+.conteudo-ia ol { margin: 0.5rem 0; padding-left: 1.25rem; }
+.conteudo-ia ul { list-style: disc; }
+.conteudo-ia ol { list-style: decimal; }
+.conteudo-ia li { margin: 0.25rem 0; line-height: 1.6; }
+.conteudo-ia strong { font-weight: 600; }
+.conteudo-ia hr { margin: 1rem 0; border-color: var(--linha); }
+.conteudo-ia > :first-child { margin-top: 0; }

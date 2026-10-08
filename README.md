@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Atelier
 
-## Getting Started
+Plataforma de criação de conteúdo para Instagram com IA. "Atelier" é um nome provisório (fica em `src/lib/marca.ts`).
 
-First, run the development server:
+## O que tem
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Login** com e-mail e senha (Supabase Auth).
+- **Briefing da marca** em 4 etapas: nicho, público, produtos e voz, mais as cores usadas na arte.
+- **Perfis múltiplos**: cada conta com seu briefing, memória e histórico; troca pelo seletor na lateral.
+- **Criar conteúdo**: escolhe formato (Reels, Carrossel, Stories), objetivo (crescimento, engajamento, vendas) e tema opcional. A IA escreve o roteiro completo.
+- **Chat de ajustes** na mesma tela, com sugestões rápidas.
+- **Arte do carrossel**: a IA divide o carrossel em slides e o app gera as imagens 1080×1350 com as cores do perfil, para baixar uma a uma ou em .zip.
+- **Memória da IA**: depois de cada resposta, a IA guarda preferências novas da marca; a pessoa vê, apaga ou ensina direto.
+- **Histórico** com busca e filtros por formato e objetivo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como rodar
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Crie um projeto no [Supabase](https://supabase.com) e rode `supabase/migrations/0001_inicial.sql` no SQL Editor.
+2. Copie `.env.example` para `.env.local` e preencha a URL e a chave pública do Supabase e a chave da API da Anthropic.
+3. `npm install` e `npm run dev`, depois abra http://localhost:3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para publicar na Vercel, importe o repositório e cadastre as mesmas variáveis de ambiente do `.env.local`. No Supabase, em Authentication → URL Configuration, coloque o endereço do site e `https://SEU-SITE/auth/confirmar` como URL de redirecionamento.
 
-## Learn More
+## Onde fica cada coisa
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Caminho | O quê |
+| --- | --- |
+| `src/lib/ia.ts` | Instruções da IA, pedido inicial por formato, extração de memória e de slides |
+| `src/app/api/conversas/[id]/mensagens` | Gera e transmite a resposta da IA |
+| `src/app/api/conversas/[id]/arte` | Gera os slides do carrossel |
+| `src/app/(app)/` | Telas do app (criar, conteúdos, histórico, memória, perfis) |
+| `src/app/globals.css` | Paleta (vinho e bege provisórios) |
+| `supabase/migrations/` | Tabelas e regras de acesso do banco |
